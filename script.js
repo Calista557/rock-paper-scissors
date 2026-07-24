@@ -10,8 +10,16 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let playerInput = prompt(("Enter rock, paper or scissors"));
-    return playerInput.toLowerCase();
+     let playerInput = prompt(("Enter rock, paper or scissors")).toLowerCase();
+     while (
+        playerInput !== "rock" &&
+        playerInput !== "paper"  &&
+        playerInput !== "scissors"
+     )    {
+        alert("Invalid input! Please enter rock, paper, or scissors");
+        playerInput = prompt(("Enter rock, paper or scissors")).toLowerCase();
+     }   
+     return playerInput
 
 }
 
